@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+
+    <title>Code Here</title>
+
+    <style>
+      #logo {
+        display: inline-block;
+        float: left;
+        padding: 3px 5px;
+      }
+      #logo img {
+        width: 300px;
+      }
+      body {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      #header {
+        width: 100%;
+        background-color: #637e94;
+        padding: 5px;
+        height: 60px;
+      }
+      #buttoncontainer {
+        width: 200px;
+        display: inline-block;
+        margin: 0px auto;
+      }
+      .togglebutton {
+        float: right;
+        border: 1px solid grey;
+        padding: 6px;
+        border-right: none;
+        margin: 7px 0px;
+        cursor: pointer;
+      }
+      #bodycontainer{
+      display: flex; 
+      justify-content: space-around;
+      }
+      #html {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      #output {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-right: 1px solid grey;
+      }
+      .active {
+        background-color: #e8f2ff;
+      }
+      .highlightedbutton {
+        background-color: grey;
+      }
+      textarea {
+        border-top: none;
+        border-color: grey;
+        resize: none;
+      }
+      .panel {
+        float: left;
+        width: 50%;
+        border: 2px solid black;
+        border-left: none;
+      }
+      iframe {
+        border: none;
+      }
+      .hidden {
+        display: none;
+      }
+      @media screen and (min-width: 394px) {
+
+.mobileView{
+  display: none;
+}
+#drop{display: none;
+
+}
+#menubar{
+  display: none;
+}
+}
+
+      @media screen and (max-width: 560px) {
+        .buttoncontainer {
+    display: none;
+  }
+  .mobileView{
+  display: block;
+}
+  #bodycontainer{
+    display: none;
+  }
+  textarea {
+        border-top: none;
+        border-color: grey;
+        height: 300px;
+        margin: 0 0;
+      }
+      .panel {
+        margin : 0px;
+        width: 100%;
+        border: 2px solid black;
+        
+      }
+      #outputpanel{
+        height: 816px;
+      }
+      #max{
+        float: right;
+        margin:7px 11px
+      }
+      #min{
+        float: right;
+        margin:7px 11px;
+        display: none;
+      }
+  #menubar img{
+    float: right;
+    display: inline-block;
+    height: 50px;
+    margin-left: 2px;
+    border:solid
+   
+  }
+  #hov:hover {
+    background-color: rgb(91, 91, 58);
+    border:yellow solid 1px
+  }
+  #drop{
+    /* background-color: #002b4e; */
+    width: 50%;
+    opacity: 1;
+    float: right;
+    height: 220px;
+    position: relative;
+    z-index: 2;
+    margin: 0 0;
+    background-image: linear-gradient(rgb(39, 16, 108),rgb(26, 27, 26));
+    display:none;
+    
+  }
+  a{
+    display: block;
+    font-size: 30px;
+    padding-left: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+   
+  }
+  a:hover{
+    color: white;
+    
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo">
+        <img src="images/logo.png" />
+       
+
+
+      </div>
+      <div id="menubar">
+
+        <img id="hov" src="images/menu.png"style="height:20px width: 2px;">
+
+      </div>
+      <div id="drop">
+        <a href="#">Theme</a>
+        <a href="#">Games</a>
+        <a href="#">Reach us</a>
+      </div>
+
+      <div class="buttoncontainer">
+        <div class="togglebutton active" id="output">Output</div>
+        <div class="togglebutton" id="js">JavaScript</div>
+        <div class="togglebutton" id="css">CSS</div>
+        <div class="togglebutton active" id="html">HTML</div>
+      </div>
+    </div>
+
+    <div
+      id="bodycontainer"
+      class="row"
+      
+    >
+      <textarea id="htmlpanel" class="panel">hello world</textarea>
+      <textarea id="csspanel" class="panel hidden">p{color:green;}</textarea>
+      <textarea id="jspanel" class="panel hidden">alert("hi there!")</textarea>
+
+      <iframe id="outputpanel" class="panel"></iframe>
+    </div>
+
+    <div class="mobileView">
+      <div id="accordion" style="z-index: 1;">
+        <h3>HTML Code</h3>
+        <div>
+          <p>
+            <textarea id="htmlpanel" class="panel">hello world</textarea>
+          </p>
+        </div>
+        <h3>CSS Code</h3>
+        <div>
+          <p>
+            <textarea id="csspanel" class="panel">p{color:green;}</textarea>
+          </p>
+        </div>
+        <h3>JavaScript Code</h3>
+        <div>
+          <p>
+            <textarea id="jspanel" class="panel">alert("hi there!")</textarea>
+          </p>
+        </div>
+    </div>
+        
+    <div style="text-align: center;background-color: #637e94;height: 35px;"><img src="images/output.png" style="height: 30px;margin: 5px auto;">
+
+
+    <span id="max" ><img src="images/max.png"style="height:20px"></span>
+
+    <span id="min" ><img src="images/mini.png"style="height:20px"></span>
+  
+  </div>
+    <iframe id="outputpanel" class="panel"></iframe>
+    
+
+    </div>
+
+    <script type="text/javascript">
+      $(".togglebutton").hover(
+        function () {
+          $(this).addClass("highlightedbutton");
+        },
+        function () {
+          $(this).removeClass("highlightedbutton");
+        }
+      );
+
+      let width = screen.width;
+
+      if(width>393){
+        
+      
+
+      $(".togglebutton").click(function () {
+        $(this).toggleClass("active");
+        $(this).removeClass("highlightedbutton");
+        var panelId = $(this).attr("id") + "panel";
+        $("#" + panelId).toggleClass("hidden");
+        var no_active_panels = 4 - $(".hidden").length;
+        $(".panel").width($(window).width() / no_active_panels - 10);
+      });
+      $(".panel").height($(window).height() - $("#header").height() - 36);
+      $(".panel").width($(window).width() / 2 - 6);
+    }
+      $("iframe").contents().find("html").html($("#htmlpanel").val());
+      $("textarea").on("change keyup paste", function () {
+        $("iframe").contents().find("html").html($("#htmlpanel").val());
+      });
+
+      $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  var count=0;
+  
+      document.getElementById("max").onclick=function(){
+      
+        document.getElementById("min").style.display = "block";
+      document.getElementById("max").style.display = "none";
+      document.getElementById("accordion").style.display = "none";
+      document.getElementById("outputpanel").style.height = "100%";
+
+      }
+      document.getElementById("min").onclick=function(){
+      
+        document.getElementById("min").style.display = "none";
+      document.getElementById("max").style.display = "block";
+      document.getElementById("accordion").style.display = "block";
+
+      }
+      var m=0
+      document.getElementById("hov").onclick=function(){ if (m%2==0){
+        document.getElementById("drop").style.display="block";
+      }
+      else{
+        document.getElementById("drop").style.display="none";
+      }m++;
+
+      }
+  
+
+
+    </script>
+  </body>
+</html>
