@@ -111,6 +111,11 @@
   }
 
   @media screen and (max-width: 736px) {
+      #logo img{
+        height: auto;
+        width: 200px;
+        margin-top: 12px;
+      }
     .buttoncontainer {
       display: none;
     }
