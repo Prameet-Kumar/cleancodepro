@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="minecss.css">
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,247 +15,154 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    
 
     <title>Code Here</title>
 
     <style>
-      #logo {
-        display: inline-block;
-        float: left;
-        padding: 3px 5px;
-      }
-      #logo img {
-        width: 300px;
-      }
-      body {
-        font-family: sans-serif;
-        padding: 0;
-        margin: 0;
-      }
-      #header {
-        width: 100%;
-        background-color: #637e94;
-        padding: 5px;
-        height: 60px;
-      }
-      #buttoncontainer {
-        width: 200px;
-        display: inline-block;
-        margin: 0px auto;
-      }
-      .togglebutton {
-        float: right;
-        border: 1px solid grey;
-        padding: 6px;
-        border-right: none;
-        margin: 7px 0px;
-        cursor: pointer;
-      }
-      #bodycontainer{
-      display: flex; 
-      justify-content: space-around;
-      }
-      #html {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-      #output {
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-right: 1px solid grey;
-      }
-      .active {
-        background-color: #e8f2ff;
-      }
-      .highlightedbutton {
-        background-color: grey;
-      }
-      textarea {
-        border-top: none;
-        border-color: grey;
-        resize: none;
-      }
-      .panel {
-        float: left;
-        width: 50%;
-        border: 2px solid black;
-        border-left: none;
-      }
-      iframe {
-        border: none;
-      }
-      .hidden {
-        display: none;
-      }
-      @media screen and (min-width: 394px) {
-
-.mobileView{
-  display: none;
-}
-#drop{display: none;
-
-}
-#menubar{
-  display: none;
-}
-}
-
-      @media screen and (max-width: 560px) {
-        .buttoncontainer {
-    display: none;
-  }
-  .mobileView{
-  display: block;
-}
-  #bodycontainer{
-    display: none;
-  }
-  textarea {
-        border-top: none;
-        border-color: grey;
-        height: 300px;
-        margin: 0 0;
-      }
-      .panel {
-        margin : 0px;
-        width: 100%;
-        border: 2px solid black;
-        
-      }
-      #outputpanel{
-        height: 816px;
-      }
-      #max{
-        float: right;
-        margin:7px 11px
-      }
-      #min{
-        float: right;
-        margin:7px 11px;
-        display: none;
-      }
-  #menubar img{
-    float: right;
-    display: inline-block;
-    height: 50px;
-    margin-left: 2px;
-    border:solid
-   
-  }
-  #hov:hover {
-    background-color: rgb(91, 91, 58);
-    border:yellow solid 1px
-  }
-  #drop{
-    /* background-color: #002b4e; */
-    width: 50%;
-    opacity: 1;
-    float: right;
-    height: 220px;
-    position: relative;
-    z-index: 2;
-    margin: 0 0;
-    background-image: linear-gradient(rgb(39, 16, 108),rgb(26, 27, 26));
-    display:none;
-    
-  }
-  a{
-    display: block;
-    font-size: 30px;
-    padding-left: 30px;
-    margin-top: 20px;
-    text-decoration: none;
-   
-  }
-  a:hover{
-    color: white;
-    
-  }
-}
+     
     </style>
   </head>
 
-  <body>
+  <body id="bg">
     <div id="header">
       <div id="logo">
         <img src="images/logo.png" />
-       
-
-
       </div>
       <div id="menubar">
-
-        <img id="hov" src="images/menu.png"style="height:20px width: 2px;">
-
+        <img id="hov" src="images/menu.png" />
       </div>
       <div id="drop">
-        <a href="#">Theme</a>
-        <a href="#">Games</a>
-        <a href="#">Reach us</a>
+        <a id="theme" href="#">
+
+          <img id="nightM"  src="images/theme3.png" >
+          <img id="dayM"  src="images/theme2.png" >
+        </a>
+        <a href="https://rb.gy/kimtlw">Games</a>
+        <a href="#" style="margin-bottom: 0px; padding-bottom: 0px">Reach us</a>
+        <div style="display: inline">
+          <a
+            style="display: inline"
+            href="https://www.linkedin.com/in/prameet-kumar-91588823b/"
+          >
+            <img src="images/1.png" style="height: 30px; width: 30px"
+          /></a>
+          <a
+            style="display: inline"
+            href="https://www.instagram.com/its_me_prameet/"
+          >
+            <img src="images/2.png" style="height: 26px; width: 26px"
+          /></a>
+          <a style="display: inline" href="https://github.com/Prameet-Kumar">
+            <img
+              src="images/5.png"
+              style="
+                height: 26px;
+                width: 26px;
+                margin-bottom: 10px;
+                background-color: white;
+              "
+          /></a>
+        </div>
       </div>
 
       <div class="buttoncontainer">
-        <div class="togglebutton active" id="output">Output</div>
-        <div class="togglebutton" id="js">JavaScript</div>
-        <div class="togglebutton" id="css">CSS</div>
-        <div class="togglebutton active" id="html">HTML</div>
+        <div class="togglebutton active" id="output" style=" color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;width:80px;text-align: center;
+        "><b>Output</b></div>
+        <div class="togglebutton" id="js" style=" color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        "><b>JavaScript</b></div>
+        <div class="togglebutton" id="css" style=" color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;width:80px;text-align: center;
+        "><b>CSS</b></div>
+        <div class="togglebutton active" id="html" style=" color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;width:80px;text-align: center;
+        "><b>HTML</b></div>
+
+        <div id="button"><img id="night" src="images/theme3.png" ><img id="day" src="images/theme2.png"></div>
       </div>
     </div>
 
-    <div
-      id="bodycontainer"
-      class="row"
-      
-    >
-      <textarea id="htmlpanel" class="panel">hello world</textarea>
-      <textarea id="csspanel" class="panel hidden">p{color:green;}</textarea>
-      <textarea id="jspanel" class="panel hidden">alert("hi there!")</textarea>
+    <div id="bodycontainer" class="row">
+      <textarea id="htmlpanel" class="panel" placeholder="write your HTML code snippet directly here Eg.&#10;&#10;  &lt;p id='trail' &gt; Hello world &lt;/p&gt;"></textarea>
+      <textarea id="csspanel" class="panel hidden" placeholder="write your CSS code snippet  here Eg.&#10;&#10;  p{color:green;}"></textarea>
+      <textarea id="jspanel" class="panel hidden" placeholder='write your JAVASCRIPT code snippet  here Eg.&#10;&#10;  document.getElementById("testing").innerHTML="Hello coder";'></textarea>
 
       <iframe id="outputpanel" class="panel"></iframe>
     </div>
 
     <div class="mobileView">
-      <div id="accordion" style="z-index: 1;">
+      <div id="accordion" style="z-index: 1">
         <h3>HTML Code</h3>
-        <div>
+        <div class="themeout">
           <p>
-            <textarea id="htmlpanel" class="panel">hello world</textarea>
+            <textarea id="htmlpanelM" class="panel" placeholder="write your HTML code snippet directly here Eg.&#10;&#10;  &lt;p id='trail' &gt; Hello world &lt;/p&gt;"></textarea>
           </p>
         </div>
         <h3>CSS Code</h3>
-        <div>
+        <div class="themeout">
           <p>
-            <textarea id="csspanel" class="panel">p{color:green;}</textarea>
+            <textarea id="csspanelM" class="panel" placeholder="write your CSS code snippet  here Eg.&#10;&#10;  p{color:green;}"></textarea>
           </p>
         </div>
         <h3>JavaScript Code</h3>
-        <div>
+        <div class="themeout">
           <p>
-            <textarea id="jspanel" class="panel">alert("hi there!")</textarea>
+            <textarea id="jspanelM" class="panel" placeholder='write your JAVASCRIPT code snippet  here Eg.&#10;&#10;  document.getElementById("testing").innerHTML="Hello coder";'></textarea>
           </p>
         </div>
-    </div>
-        
-    <div style="text-align: center;background-color: #637e94;height: 35px;"><img src="images/output.png" style="height: 30px;margin: 5px auto;">
+      </div>
 
+      <div style="text-align: center; background-color: #637e94; height: 35px">
+        <img src="images/output.png" style="height: 30px; margin: 5px auto" />
 
-    <span id="max" ><img src="images/max.png"style="height:20px"></span>
+        <span id="max"><img src="images/max.png" style="height: 20px" /></span>
 
-    <span id="min" ><img src="images/mini.png"style="height:20px"></span>
-  
-  </div>
-    <iframe id="outputpanel" class="panel"></iframe>
-    
-
+        <span id="min"><img src="images/mini.png" style="height: 20px" /></span>
+      </div>
+      <iframe id="outputpanelM" class="panel"></iframe>
     </div>
 
     <script type="text/javascript">
+
+      function upadate(){
+
+        $("iframe")
+            .contents()
+            .find("html")
+            .html(
+              "<html><head><style>" +
+                $("#csspanel").val() +
+                "</style></head>" +
+                $("#htmlpanel").val() +
+                "</html>"
+            );
+            
+            document.getElementById("outputpanel").contentWindow.eval($("#jspanel").val());
+      }
+      function upadateM(){
+
+$("iframe")
+    .contents()
+    .find("html")
+    .html(
+      "<html><head><style>" +
+        $("#csspanelM").val() +
+        "</style></head>" +
+        $("#htmlpanelM").val() +
+        "</html>"
+    );
+    document.getElementById("outputpanelM").contentWindow.eval($("#jspanelM").val());
+    
+}
+
       $(".togglebutton").hover(
         function () {
           $(this).addClass("highlightedbutton");
@@ -265,57 +174,115 @@
 
       let width = screen.width;
 
-      if(width>393){
-        
-      
+      if (width > 736) {
+        $(".togglebutton").click(function () {
+          $(this).toggleClass("active");
+          $(this).removeClass("highlightedbutton");
+          var panelId = $(this).attr("id") + "panel";
+          $("#" + panelId).toggleClass("hidden");
+          var no_active_panels = 4 - $(".hidden").length;
+          $(".panel").width($(window).width() / no_active_panels - 10);
+        });
+        $(".panel").height($(window).height() - $("#header").height() - 36);
+        $(".panel").width($(window).width() / 2 - 6);
 
-      $(".togglebutton").click(function () {
-        $(this).toggleClass("active");
-        $(this).removeClass("highlightedbutton");
-        var panelId = $(this).attr("id") + "panel";
-        $("#" + panelId).toggleClass("hidden");
-        var no_active_panels = 4 - $(".hidden").length;
-        $(".panel").width($(window).width() / no_active_panels - 10);
-      });
-      $(".panel").height($(window).height() - $("#header").height() - 36);
-      $(".panel").width($(window).width() / 2 - 6);
-    }
-      $("iframe").contents().find("html").html($("#htmlpanel").val());
-      $("textarea").on("change keyup paste", function () {
-        $("iframe").contents().find("html").html($("#htmlpanel").val());
-      });
+        upadate();
 
-      $( function() {
-    $( "#accordion" ).accordion();
-  } );
-  var count=0;
-  
-      document.getElementById("max").onclick=function(){
-      
+        $("textarea").on("change keyup paste", function () {
+         upadate();
+        });
+      } else {
+        upadateM();
+        $("textarea").on("change keyup paste", function () {
+         upadateM();
+        });
+      }
+
+      $(function () {
+        $("#accordion").accordion();
+      });
+      var count = 0;
+
+      document.getElementById("max").onclick = function () {
         document.getElementById("min").style.display = "block";
-      document.getElementById("max").style.display = "none";
-      document.getElementById("accordion").style.display = "none";
-      document.getElementById("outputpanel").style.height = "100%";
-
-      }
-      document.getElementById("min").onclick=function(){
-      
+        document.getElementById("max").style.display = "none";
+        document.getElementById("accordion").style.display = "none";
+        document.getElementById("outputpanel").style.height = "100%";
+      };
+      document.getElementById("min").onclick = function () {
         document.getElementById("min").style.display = "none";
-      document.getElementById("max").style.display = "block";
-      document.getElementById("accordion").style.display = "block";
+        document.getElementById("max").style.display = "block";
+        document.getElementById("accordion").style.display = "block";
+      };
+      var m = 0;
+      document.getElementById("hov").onclick = function () {
+        if (m % 2 == 0) {
+          document.getElementById("drop").style.display = "block";
+        } else {
+          document.getElementById("drop").style.display = "none";
+        }
+        m++;
+      };
+      var t = 0;
 
-      }
-      var m=0
-      document.getElementById("hov").onclick=function(){ if (m%2==0){
-        document.getElementById("drop").style.display="block";
-      }
-      else{
-        document.getElementById("drop").style.display="none";
-      }m++;
-
-      }
-  
-
+      document.getElementById("theme").onclick = function () {
+        if (t % 2 == 0) {
+          
+          document.getElementById("drop").style.backgroundImage= "linear-gradient rgb(45, 41, 138), rgb(26, 27, 26))";
+          document.getElementById("header").style.backgroundColor = "#06398a";
+          document.getElementById("bg").style.backgroundColor = "#06398a";
+          document.getElementById("htmlpanelM").style.backgroundColor = "black";
+          document.getElementById("htmlpanelM").style.color = "white";
+          document.getElementById("csspanelM").style.backgroundColor = "black";
+          document.getElementById("csspanelM").style.color = "white";
+          document.getElementById("jspanelM").style.backgroundColor = "black";
+          document.getElementById("jspanelM").style.color = "white";
+          document.getElementById("nightM").style.display = "block";
+          document.getElementById("dayM").style.display = "none";
+          
+          
+        } else {
+          document.getElementById("drop").style.backgroundImage= "linear-gradient(rgb(133, 150, 63), rgb(26, 27, 26))";
+          document.getElementById("header").style.backgroundColor = "#637e94";
+          document.getElementById("bg").style.backgroundColor = "#637e94";
+          document.getElementById("htmlpanelM").style.backgroundColor = "white";
+          document.getElementById("htmlpanelM").style.color = "black";
+          document.getElementById("csspanelM").style.backgroundColor = "white";
+          document.getElementById("csspanelM").style.color = "black";
+          document.getElementById("jspanelM").style.backgroundColor = "white";
+          document.getElementById("jspanelM").style.color = "black";
+          document.getElementById("dayM").style.display = "block";
+          document.getElementById("nightM").style.display = "none";
+        }
+        t++;
+      };
+var b=0;
+      document.getElementById("button").onclick = function () {
+        if (b % 2 == 0) {
+          document.getElementById("header").style.backgroundColor = "#06398a";
+          document.getElementById("bg").style.backgroundColor = "#06398a";
+          document.getElementById("htmlpanel").style.backgroundColor = "black";
+          document.getElementById("htmlpanel").style.color = "white";
+          document.getElementById("csspanel").style.backgroundColor = "black";
+          document.getElementById("csspanel").style.color = "white";
+          document.getElementById("jspanel").style.backgroundColor = "black";
+          document.getElementById("jspanel").style.color = "white";
+          document.getElementById("day").style.display="none";
+          document.getElementById("night").style.display="block";
+        } else {
+          document.getElementById("bg").style.backgroundColor = "#637e94";
+          document.getElementById("header").style.backgroundColor = "#637e94";
+          document.getElementById("htmlpanel").style.backgroundColor = "white";
+          document.getElementById("htmlpanel").style.color = "black";
+          document.getElementById("csspanel").style.backgroundColor = "white";
+          document.getElementById("csspanel").style.color = "black";
+          document.getElementById("jspanel").style.backgroundColor = "white";
+          document.getElementById("jspanel").style.color = "black";
+          document.getElementById("day").style.display="block";
+          document.getElementById("night").style.display="none";
+        }
+        b++;
+      };
 
     </script>
   </body>
