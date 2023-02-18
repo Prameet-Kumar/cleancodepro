@@ -101,19 +101,19 @@
     <div class="mobileView">
       <div id="accordion" style="z-index: 1">
         <h3>HTML Code</h3>
-        <div class="themeout">
+        <div style="background-image: linear-gradient(rgb(2, 51, 61), rgb(117, 149, 179));">
           <p>
             <textarea id="htmlpanelM" class="panel" placeholder="write your HTML code snippet directly here Eg.&#10;&#10;  &lt;p id='trail' &gt; Hello world &lt;/p&gt;"></textarea>
           </p>
         </div>
         <h3>CSS Code</h3>
-        <div class="themeout">
+        <div style="background-image: linear-gradient(rgb(2, 51, 61), rgb(117, 149, 179));">
           <p>
             <textarea id="csspanelM" class="panel" placeholder="write your CSS code snippet  here Eg.&#10;&#10;  p{color:green;}"></textarea>
           </p>
         </div>
         <h3>JavaScript Code</h3>
-        <div class="themeout">
+        <div  style="background-image: linear-gradient(rgb(2, 51, 61), rgb(117, 149, 179));">
           <p>
             <textarea id="jspanelM" class="panel" placeholder='write your JAVASCRIPT code snippet  here Eg.&#10;&#10;  document.getElementById("testing").innerHTML="Hello coder";'></textarea>
           </p>
@@ -171,6 +171,11 @@ $("iframe")
           $(this).removeClass("highlightedbutton");
         }
       );
+      var check=0;
+      if (window.matchMedia("(max-width: 767px)").matches)
+{
+check=1;
+}
 
       let width = screen.width;
 
@@ -229,6 +234,8 @@ $("iframe")
         if (t % 2 == 0) {
           
           document.getElementById("drop").style.backgroundImage= "linear-gradient rgb(45, 41, 138), rgb(26, 27, 26))";
+          document.getElementById("drop").style.display="none";
+          m++;
           document.getElementById("header").style.backgroundColor = "#06398a";
           document.getElementById("bg").style.backgroundColor = "#06398a";
           document.getElementById("htmlpanelM").style.backgroundColor = "black";
@@ -243,6 +250,8 @@ $("iframe")
           
         } else {
           document.getElementById("drop").style.backgroundImage= "linear-gradient(rgb(133, 150, 63), rgb(26, 27, 26))";
+          document.getElementById("drop").style.display="none";
+          m++;
           document.getElementById("header").style.backgroundColor = "#637e94";
           document.getElementById("bg").style.backgroundColor = "#637e94";
           document.getElementById("htmlpanelM").style.backgroundColor = "white";
