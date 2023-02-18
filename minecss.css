@@ -111,11 +111,12 @@
   }
 
   @media screen and (max-width: 736px) {
-      #logo img{
+    #logo img{
         height: auto;
         width: 200px;
         margin-top: 12px;
       }
+
     .buttoncontainer {
       display: none;
     }
@@ -175,15 +176,20 @@
       position: absolute;
       z-index: 2;
       margin-top: 53px;
+      padding-right: 3px;
+
       opacity: .98;
       background-image: linear-gradient(rgb(70, 83, 17), rgb(26, 27, 26));
       display: none;
       box-shadow: 0 3px 10px rgba(129, 124, 124, 0.2);
+      border-bottom-right-radius: 13px;
+      border-bottom-left-radius: 13px;
+
     }
     a {
       display: block;
       font-size: 25px;
-      padding-left: 30px;
+      padding-left: 20px;
       margin-top: 20px;
       /* text-decoration: none; */
       color: white;
